@@ -1,4 +1,5 @@
 import { MessageCircle, Mail, MapPin, Phone } from 'lucide-react'
+import { images } from '../config/images'
 import Button from './ui/Button'
 import FadeIn from './ui/FadeIn'
 
@@ -39,41 +40,39 @@ const inputClass =
   'w-full rounded-lg border border-white/10 bg-white/[0.04] px-4 py-3.5 text-sm text-white placeholder:text-slate-500 transition focus:border-orange-500/60 focus:bg-white/[0.06] focus:outline-none focus:ring-2 focus:ring-orange-500/20'
 
 export default function Footer() {
-  const year = new Date().getFullYear()
+  const launchYear = 2026
+  const currentYear = new Date().getFullYear()
+  const copyrightYear =
+    currentYear > launchYear ? `${launchYear}–${currentYear}` : String(currentYear)
 
   return (
-    <footer id="contact" className="surface-dark relative overflow-hidden border-t border-white/[0.06]">
-      <div className="border-b border-white/[0.06] bg-white/[0.02]">
-        <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-          <FadeIn className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-widest text-orange-400">
-                Get Started
-              </p>
-              <h2 className="mt-2 font-display text-2xl font-bold text-white sm:text-3xl">
-                Ready for a cleaner space?
-              </h2>
-              <p className="mt-2 max-w-md text-slate-400">
-                Request a free quote — no obligation. We respond within 24 hours.
-              </p>
-            </div>
-            <Button href="#contact-form">Book a Consultation</Button>
-          </FadeIn>
-        </div>
-      </div>
+    <>
+      <section id="contact" className="surface-dark surface-dark-grid relative overflow-hidden border-t border-white/[0.06]">
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/[0.02] to-transparent" />
 
-      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="grid gap-12 lg:grid-cols-12 lg:gap-10">
-          <FadeIn className="lg:col-span-5">
+        <div className="relative mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
+          <FadeIn className="mb-10 text-center">
+            <p className="text-sm font-semibold uppercase tracking-widest text-orange-400">
+              Contact Us
+            </p>
+            <h2 className="mt-2 font-display text-2xl font-bold text-white sm:text-3xl">
+              Request a Free Quote
+            </h2>
+            <p className="mt-2 text-slate-400">
+              Tell us what you need and we will get back to you within 24 hours.
+            </p>
+          </FadeIn>
+
+          <FadeIn delay={0.08}>
             <div
               id="contact-form"
               className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 shadow-xl shadow-black/20 sm:p-8"
             >
-              <h3 className="font-display text-lg font-bold text-white">
+              <h3 className="font-display text-lg font-bold text-white sm:text-xl">
                 Contact & Booking
               </h3>
               <p className="mt-1 text-sm text-slate-500">
-                Fill in your details and we&apos;ll be in touch shortly.
+                Send us your details and we will contact you to arrange a quote.
               </p>
               <form className="mt-6 space-y-4" onSubmit={(e) => e.preventDefault()}>
                 <input type="text" name="name" required placeholder="Your Name" className={inputClass} />
@@ -91,88 +90,97 @@ export default function Footer() {
               </form>
             </div>
           </FadeIn>
+        </div>
+      </section>
 
-          <FadeIn delay={0.08} className="lg:col-span-3">
-            <h3 className="text-xs font-bold uppercase tracking-widest text-slate-500">
-              Services
-            </h3>
-            <ul className="mt-5 space-y-3">
-              {serviceLinks.map((item) => (
-                <li key={item}>
+      <footer className="border-t border-slate-200 bg-white">
+        <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+          <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10">
+            <FadeIn>
+              <img
+                src={images.logo}
+                alt="Safe Choice Cleaning"
+                className="h-12 w-auto sm:h-14"
+              />
+              <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-600">
+                Home and commercial cleaning across the local area. Licensed,
+                insured and locally run.
+              </p>
+              <div className="mt-6 flex gap-2">
+                {socials.map(({ type, label, href }) => (
                   <a
-                    href="#services"
-                    className="text-sm text-slate-400 transition hover:text-white"
+                    key={label}
+                    href={href}
+                    aria-label={label}
+                    className="flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-slate-50 text-slate-600 transition hover:border-orange-500/50 hover:bg-orange-50 hover:text-navy-700"
                   >
-                    {item}
+                    <SocialIcon type={type} />
+                  </a>
+                ))}
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={0.08}>
+              <h3 className="text-xs font-bold uppercase tracking-widest text-navy-800">
+                Services
+              </h3>
+              <ul className="mt-5 space-y-3">
+                {serviceLinks.map((item) => (
+                  <li key={item}>
+                    <a
+                      href="#services"
+                      className="text-sm text-slate-600 transition hover:text-navy-800"
+                    >
+                      {item}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </FadeIn>
+
+            <FadeIn delay={0.12}>
+              <h3 className="text-xs font-bold uppercase tracking-widest text-navy-800">
+                Contact Us
+              </h3>
+              <ul className="mt-5 space-y-4">
+                <li className="flex items-start gap-3 text-sm text-slate-600">
+                  <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-orange-600" />
+                  <span>
+                    24 Business Park Drive, Suite 100
+                    <br />
+                    Your City, UK
+                  </span>
+                </li>
+                <li>
+                  <a
+                    href="mailto:info@safechoicecleaning.com"
+                    className="flex items-center gap-3 text-sm text-slate-600 transition hover:text-navy-800"
+                  >
+                    <Mail className="h-5 w-5 shrink-0 text-orange-600" />
+                    info@safechoicecleaning.com
                   </a>
                 </li>
-              ))}
-            </ul>
-          </FadeIn>
+                <li>
+                  <a
+                    href="tel:+447386082151"
+                    className="flex items-center gap-3 text-sm text-slate-600 transition hover:text-navy-800"
+                  >
+                    <Phone className="h-5 w-5 shrink-0 text-orange-600" />
+                    07386 082151
+                  </a>
+                </li>
+              </ul>
+            </FadeIn>
+          </div>
 
-          <FadeIn delay={0.12} className="lg:col-span-4">
-            <h3 className="text-xs font-bold uppercase tracking-widest text-slate-500">
-              Contact Us
-            </h3>
-            <ul className="mt-5 space-y-4">
-              <li className="flex items-start gap-3 text-sm text-slate-400">
-                <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-orange-500" />
-                <span>
-                  24 Business Park Drive, Suite 100
-                  <br />
-                  Your City, UK
-                </span>
-              </li>
-              <li>
-                <a
-                  href="mailto:info@advancedcleaning.com"
-                  className="flex items-center gap-3 text-sm text-slate-400 transition hover:text-white"
-                >
-                  <Mail className="h-5 w-5 shrink-0 text-orange-500" />
-                  info@advancedcleaning.com
-                </a>
-              </li>
-              <li>
-                <a
-                  href="tel:+441234567890"
-                  className="flex items-center gap-3 text-sm text-slate-400 transition hover:text-white"
-                >
-                  <Phone className="h-5 w-5 shrink-0 text-orange-500" />
-                  +44 123 456 7890
-                </a>
-              </li>
-            </ul>
-
-            <div className="mt-8 flex gap-2">
-              {socials.map(({ type, label, href }) => (
-                <a
-                  key={label}
-                  href={href}
-                  aria-label={label}
-                  className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/[0.04] text-slate-400 transition hover:border-orange-500/50 hover:bg-orange-500/10 hover:text-orange-400"
-                >
-                  <SocialIcon type={type} />
-                </a>
-              ))}
-            </div>
-
-            <div className="mt-8 border-l-2 border-orange-500/60 pl-4">
-              <p className="font-display font-bold text-white">Advanced Cleaning Services</p>
-              <p className="mt-2 text-sm leading-relaxed text-slate-500">
-                Professional cleaning for homes and businesses. Licensed, insured,
-                and committed to excellence.
-              </p>
-            </div>
-          </FadeIn>
+          <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-slate-200 pt-8 sm:flex-row">
+            <p className="text-sm text-slate-500">
+              © {copyrightYear} Safe Choice Cleaning. All rights reserved.
+            </p>
+            <p className="text-xs text-slate-500">Professional cleaning · Residential & commercial</p>
+          </div>
         </div>
-
-        <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/[0.06] pt-8 sm:flex-row">
-          <p className="text-sm text-slate-600">
-            © {year} Advanced Cleaning Services. All rights reserved.
-          </p>
-          <p className="text-xs text-slate-600">Professional cleaning · Residential & commercial</p>
-        </div>
-      </div>
-    </footer>
+      </footer>
+    </>
   )
 }

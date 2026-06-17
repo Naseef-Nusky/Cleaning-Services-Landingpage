@@ -6,23 +6,23 @@ import FadeIn from './ui/FadeIn'
 const faqs = [
   {
     q: 'How do I book a cleaning service?',
-    a: 'Contact us via the form below, phone, or email. We will confirm your requirements and provide a free, no-obligation quote within 24 hours.',
+    a: 'Use the contact form, call us, or send an email. We will discuss your requirements and send a free quote within 24 hours.',
   },
   {
     q: 'Do you bring your own equipment and supplies?',
-    a: 'Yes. Our team arrives fully equipped with professional-grade tools and eco-friendly products. You can also request specific products if needed.',
+    a: 'Yes. Our team brings professional equipment and suitable cleaning products. Let us know if you have any specific requirements.',
   },
   {
     q: 'Are your cleaners insured and background-checked?',
-    a: 'Absolutely. Every team member is fully insured, trained, and background-checked for your peace of mind.',
+    a: 'Yes. All staff are insured, trained and background-checked.',
   },
   {
     q: 'What areas do you cover?',
-    a: 'We serve residential and commercial clients across the local region. Contact us with your postcode and we will confirm availability.',
+    a: 'We cover residential and commercial properties in the local area. Contact us with your postcode and we will confirm coverage.',
   },
   {
     q: 'Do you offer one-off and recurring cleans?',
-    a: 'Yes — from single deep cleans and end-of-tenancy jobs to weekly, fortnightly, or monthly maintenance contracts.',
+    a: 'Yes. We offer one-off deep cleans, end-of-tenancy cleans, and regular weekly, fortnightly or monthly contracts.',
   },
 ]
 

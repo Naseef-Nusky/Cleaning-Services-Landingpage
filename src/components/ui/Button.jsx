@@ -1,6 +1,6 @@
 const variants = {
   primary:
-    'bg-orange-500 text-surface-950 shadow-lg shadow-black/20 hover:bg-orange-400',
+    'bg-orange-500 text-navy-900 shadow-lg shadow-black/20 hover:bg-orange-400',
   outline:
     'border-2 border-white/40 bg-white/10 text-white backdrop-blur hover:border-white/60 hover:bg-white/20',
   dark: 'bg-navy-800 text-white shadow-lg shadow-navy-900/20 hover:bg-navy-700',

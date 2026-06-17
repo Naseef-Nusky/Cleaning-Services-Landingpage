@@ -6,15 +6,15 @@ import ThemeImage from './ui/ThemeImage'
 const points = [
   {
     icon: Sun,
-    title: 'Your Home, Treated Like Ours',
+    title: 'Careful, Thorough Cleaning',
     description:
-      'We use careful, room-by-room methods and respect your belongings — no shortcuts, no rush jobs.',
+      'We work room by room, handle your property with respect, and do not cut corners.',
   },
   {
     icon: HeartHandshake,
-    title: 'People-First Service',
+    title: 'Reliable Local Team',
     description:
-      'Friendly, punctual teams who communicate clearly and leave every space smelling fresh and looking renewed.',
+      'Punctual visits, clear communication, and a tidy finish every time.',
   },
 ]
 
@@ -25,12 +25,12 @@ export default function CareSection() {
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
           <FadeIn>
             <h2 className="font-display text-3xl font-extrabold text-navy-900 sm:text-4xl">
-              We Don&apos;t Just Clean –{' '}
-              <span className="text-orange-500">We Care</span>
+              Cleaning Done{' '}
+              <span className="text-orange-500">Properly</span>
             </h2>
             <p className="mt-4 text-lg text-slate-600">
-              Cleaning is more than removing dirt. It&apos;s about creating healthier,
-              happier spaces for your family, staff, and guests.
+              Good cleaning is about more than surface dirt. We help keep homes
+              and workplaces clean, hygienic and presentable.
             </p>
             <div className="mt-10 space-y-8">
               {points.map((point) => {

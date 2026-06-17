@@ -4,28 +4,30 @@
   --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
 
-  /* Brand greens — headings & light sections */
-  --color-navy-50: #f4f7f6;
-  --color-navy-100: #e8eeec;
-  --color-navy-200: #c5d6d0;
-  --color-navy-300: #8fb3a8;
-  --color-navy-400: #5a8f7e;
-  --color-navy-500: #3d7263;
-  --color-navy-600: #2f5c4f;
-  --color-navy-700: #264a40;
-  --color-navy-800: #1f3d35;
-  --color-navy-900: #1a332c;
-  --color-navy-950: #142822;
+  /* Brand navy — matches logo primary (#1a476b) */
+  --color-navy-50: #eff6fa;
+  --color-navy-100: #d9eaf4;
+  --color-navy-200: #b3d5e9;
+  --color-navy-300: #7eb8d9;
+  --color-navy-400: #4a96be;
+  --color-navy-500: #2d7aa8;
+  --color-navy-600: #246389;
+  --color-navy-700: #1f5573;
+  --color-navy-800: #1a476b;
+  --color-navy-900: #153a59;
+  --color-navy-950: #0f2d47;
 
-  /* Dark surfaces — hero & footer (charcoal, not bright green) */
-  --color-surface-800: #1c2422;
-  --color-surface-900: #141a19;
-  --color-surface-950: #0d1110;
+  /* Dark surfaces — hero & footer (deep navy) */
+  --color-surface-800: #1a2f3f;
+  --color-surface-900: #122230;
+  --color-surface-950: #0c1824;
 
-  /* Accent — warm gold */
-  --color-orange-400: #fbbf24;
-  --color-orange-500: #f59e0b;
-  --color-orange-600: #d97706;
+  /* Accent — logo sparkle blue (#90c2e7) */
+  --color-orange-100: #e3f2fa;
+  --color-orange-300: #b8daf2;
+  --color-orange-400: #a8d4f0;
+  --color-orange-500: #90c2e7;
+  --color-orange-600: #6baed6;
 }
 
 html {
@@ -40,8 +42,8 @@ body {
   .surface-dark {
     background-color: var(--color-surface-900);
     background-image:
-      radial-gradient(ellipse 80% 50% at 50% -20%, rgba(61, 114, 99, 0.12), transparent),
-      radial-gradient(ellipse 60% 40% at 100% 50%, rgba(245, 158, 11, 0.04), transparent),
+      radial-gradient(ellipse 80% 50% at 50% -20%, rgba(26, 71, 107, 0.18), transparent),
+      radial-gradient(ellipse 60% 40% at 100% 50%, rgba(144, 194, 231, 0.06), transparent),
       linear-gradient(180deg, var(--color-surface-900) 0%, var(--color-surface-950) 100%);
   }
 

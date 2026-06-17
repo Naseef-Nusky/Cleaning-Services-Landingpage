@@ -4,11 +4,11 @@ import FadeIn from './ui/FadeIn'
 import ThemeImage from './ui/ThemeImage'
 
 const benefits = [
-  'Eco-friendly, non-toxic cleaning products',
-  'Fully licensed, insured & vetted staff',
-  'Transparent pricing with no hidden fees',
-  'Same-week booking & flexible time slots',
-  '100% satisfaction guarantee on every job',
+  'Eco-friendly cleaning products',
+  'Licensed, insured and vetted staff',
+  'Clear pricing with no hidden charges',
+  'Same-week appointments available',
+  'Satisfaction guaranteed on every job',
 ]
 
 export default function About() {
@@ -22,16 +22,16 @@ export default function About() {
               <div className="relative overflow-hidden rounded-3xl shadow-2xl">
                 <ThemeImage
                   src={images.about}
-                  alt="Advanced Cleaning Services team at work"
+                  alt="Safe Choice Cleaning team at work"
                   className="aspect-square w-full object-cover"
                 />
                 <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-navy-900/60 via-transparent to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6">
                   <p className="font-display text-xl font-bold text-white">
-                    Advanced Cleaning Services
+                    Safe Choice Cleaning
                   </p>
-                  <p className="mt-1 text-sm text-lime-300">
-                    Professional results, every visit
+                  <p className="mt-1 text-sm text-orange-300">
+                    Consistent results on every visit
                   </p>
                 </div>
               </div>
@@ -43,13 +43,13 @@ export default function About() {
               Why Choose Us
             </p>
             <h2 className="mt-3 font-display text-3xl font-extrabold leading-tight text-navy-900 sm:text-4xl">
-              Shine Your Homes with{' '}
-              <span className="text-orange-500">Advanced Cleaning Services</span>
+              A Local Cleaning Company You Can{' '}
+              <span className="text-orange-500">Depend On</span>
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-slate-600">
-              We combine industry-grade equipment with meticulous attention to
-              detail. Whether it&apos;s a weekly home refresh or a full commercial
-              deep clean, our team treats every space like our own.
+              We use professional equipment and work carefully on every job —
+              whether that is a regular home clean, office maintenance, or a
+              one-off deep clean.
             </p>
             <ul className="mt-10 space-y-4">
               {benefits.map((item) => (

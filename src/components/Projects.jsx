@@ -13,14 +13,14 @@ export default function Projects() {
               Portfolio
             </p>
             <h2 className="mt-3 font-display text-3xl font-extrabold text-navy-900 sm:text-4xl">
-              Our Featured Cleaning Projects
+              Our Work
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-slate-600">
-              From corporate offices to family homes, see the results our team
-              delivers — consistent quality, every single visit.
+              A selection of recent home and commercial cleaning jobs completed
+              by our team.
             </p>
             <div className="mt-8">
-              <Button href="#contact">View All Work</Button>
+              <Button href="#contact">Request a Quote</Button>
             </div>
           </FadeIn>
 

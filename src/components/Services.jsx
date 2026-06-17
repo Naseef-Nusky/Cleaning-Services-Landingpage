@@ -9,7 +9,7 @@ const services = [
     image: images.services.commercial,
     title: 'Commercial Cleaning',
     description:
-      'Offices, retail spaces, and workplaces kept pristine with flexible after-hours scheduling and minimal disruption.',
+      'Office and workplace cleaning with after-hours visits available where required.',
     featured: false,
   },
   {
@@ -17,7 +17,7 @@ const services = [
     image: images.services.residential,
     title: 'Residential Cleaning',
     description:
-      'Regular and one-off home cleans tailored to your lifestyle — kitchens, bathrooms, and living areas spotless.',
+      'Regular and one-off home cleans covering kitchens, bathrooms, bedrooms and living areas.',
     featured: false,
   },
   {
@@ -25,7 +25,7 @@ const services = [
     image: images.services.deepCarpet,
     title: 'Deep & Carpet Cleaning',
     description:
-      'Steam extraction, stain removal, and allergen reduction for carpets, rugs, and upholstery that look brand new.',
+      'Steam cleaning, stain treatment and deep cleans for carpets, rugs and upholstery.',
     featured: false,
   },
   {
@@ -33,7 +33,7 @@ const services = [
     image: images.services.endOfTenancy,
     title: 'End of Tenancy',
     description:
-      'Landlord and tenant move-in/out deep cleans with inspection-ready standards and fast turnaround.',
+      'Move-in and move-out cleans completed to landlord inspection standard.',
     featured: false,
   },
 ]
@@ -47,11 +47,10 @@ export default function Services() {
             What We Offer
           </p>
           <h2 className="mt-3 font-display text-3xl font-extrabold text-navy-900 sm:text-4xl">
-            Explore Our Services
+            Our Services
           </h2>
           <p className="mt-4 text-lg text-slate-600">
-            Comprehensive cleaning solutions for homes and businesses — one
-            trusted team for every need.
+            Home and commercial cleaning carried out by the same reliable local team.
           </p>
         </FadeIn>
 

@@ -1,45 +1,56 @@
+import logo from '../assets/logo.png'
+import logoLight from '../assets/logo-2.png'
+import hero from '../assets/Hero-Team Section.png'
+import officeMaintenance from '../assets/Office Maintenance.png'
+import officeMaintenanceAlt from '../assets/Office Maintenance11.png'
+import deepCarpetCleaning from '../assets/Deep & Carpet Cleaning.png'
+import moveOutDeepClean from '../assets/Move-Out Deep Clean.png'
+import residentialCleaning from '../assets/Residential Cleaning.png'
+
 /**
- * Site images — all files live in /public and are served from the site root.
- * Add or swap files in public/, then update the paths here.
+ * Site images — bundled from src/assets via Vite.
  */
 export const images = {
-  hero: '/hero-team.png',
+  logo,
+  logoLight,
 
-  about: '/office-maintenance.png',
+  hero,
 
-  care: '/deep-carpet-cleaning.png',
+  about: officeMaintenance,
+
+  care: deepCarpetCleaning,
 
   services: {
-    commercial: '/commercial-cleaning.png',
-    residential: '/residential-cleaning.png',
-    deepCarpet: '/deep-carpet-cleaning.png',
-    endOfTenancy: '/move-out-deep-clean.png',
-    officeMaintenance: '/office-maintenance.png',
+    commercial: officeMaintenance,
+    residential: residentialCleaning,
+    deepCarpet: deepCarpetCleaning,
+    endOfTenancy: moveOutDeepClean,
+    officeMaintenance,
   },
 
   projects: [
     {
-      src: '/commercial-cleaning.png',
+      src: officeMaintenance,
       alt: 'Commercial cleaning project',
       span: 'col-span-1 row-span-1',
     },
     {
-      src: '/office-maintenance.png',
+      src: officeMaintenanceAlt,
       alt: 'Office maintenance cleaning',
       span: 'col-span-1 row-span-2',
     },
     {
-      src: '/residential-cleaning.png',
+      src: residentialCleaning,
       alt: 'Residential home cleaning',
       span: 'col-span-1 row-span-1',
     },
     {
-      src: '/deep-carpet-cleaning.png',
+      src: deepCarpetCleaning,
       alt: 'Deep carpet cleaning',
       span: 'col-span-1 row-span-1',
     },
     {
-      src: '/move-out-deep-clean.png',
+      src: moveOutDeepClean,
       alt: 'Move-out deep clean',
       span: 'col-span-1 row-span-1',
     },
