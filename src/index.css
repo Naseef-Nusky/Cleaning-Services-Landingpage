@@ -32,10 +32,12 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   @apply font-sans text-slate-700 antialiased;
+  overflow-x: hidden;
 }
 
 @layer components {

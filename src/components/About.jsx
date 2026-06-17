@@ -17,8 +17,8 @@ export default function About() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
           <FadeIn direction="right">
-            <div className="relative mx-auto max-w-lg lg:max-w-none">
-              <div className="absolute -inset-6 rounded-[2rem] bg-gradient-to-br from-orange-400/20 via-navy-500/10 to-transparent" />
+            <div className="relative mx-auto max-w-lg overflow-hidden lg:max-w-none">
+              <div className="absolute -inset-2 rounded-[2rem] bg-gradient-to-br from-orange-400/20 via-navy-500/10 to-transparent sm:-inset-4 lg:-inset-6" />
               <div className="relative overflow-hidden rounded-3xl shadow-2xl">
                 <ThemeImage
                   src={images.about}

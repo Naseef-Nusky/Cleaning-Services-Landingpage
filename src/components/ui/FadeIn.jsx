@@ -7,10 +7,10 @@ export default function FadeIn({
   direction = 'up',
 }) {
   const offsets = {
-    up: { y: 32 },
-    down: { y: -32 },
-    left: { x: 32 },
-    right: { x: -32 },
+    up: { y: 24 },
+    down: { y: -24 },
+    left: { x: 16 },
+    right: { x: -16 },
     none: {},
   }
 
@@ -18,9 +18,9 @@ export default function FadeIn({
     <motion.div
       initial={{ opacity: 0, ...offsets[direction] }}
       whileInView={{ opacity: 1, x: 0, y: 0 }}
-      viewport={{ once: true, margin: '-60px' }}
+      viewport={{ once: true, margin: '-40px' }}
       transition={{ duration: 0.55, delay, ease: [0.22, 1, 0.36, 1] }}
-      className={className}
+      className={`max-w-full ${className}`}
     >
       {children}
     </motion.div>

@@ -56,7 +56,7 @@ export default function Hero() {
             ))}
           </ul>
 
-          <div className="mt-10 flex flex-nowrap items-center gap-2 sm:gap-4">
+          <div className="mt-10 flex w-full max-w-full flex-nowrap items-center gap-2 sm:gap-4">
             <Button
               href="#contact"
               className="shrink-0 whitespace-nowrap px-4 py-2.5 text-xs sm:px-7 sm:py-3.5 sm:text-sm"
@@ -75,8 +75,8 @@ export default function Hero() {
         </FadeIn>
 
         <FadeIn delay={0.15} direction="left">
-          <div className="relative mx-auto max-w-md lg:max-w-none">
-            <div className="absolute -inset-1 rounded-[1.75rem] bg-gradient-to-br from-orange-500/20 via-transparent to-navy-600/10 opacity-60 blur-sm" />
+          <div className="relative mx-auto max-w-md overflow-hidden lg:max-w-none">
+            <div className="absolute inset-0 rounded-[1.75rem] bg-gradient-to-br from-orange-500/20 via-transparent to-navy-600/10 opacity-60 blur-sm sm:-inset-1" />
             <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-surface-800 shadow-2xl shadow-black/40 ring-1 ring-white/5">
               <ThemeImage
                 src={images.hero}
